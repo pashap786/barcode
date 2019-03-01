@@ -29,8 +29,8 @@ import org.springframework.http.MediaType;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.front.component.FileWrapper;
-import com.front.exceptions.UploadException;
+import com.barcode.component.FileWrapper;
+import com.barcode.exceptions.UploadException;
 import com.google.common.io.ByteStreams;
 
 public class ImageUtility {

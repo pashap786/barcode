@@ -11,6 +11,8 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 
+import com.barcode.decoder.BarcodeImageDecoder;
+
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer {
 
@@ -36,4 +38,8 @@ public class Application extends SpringBootServletInitializer {
 	    return factory.createMultipartConfig();
 	}
 
+	@Bean
+	public BarcodeImageDecoder barcodeImageDecoder() {
+		return new BarcodeImageDecoder();
+	}
 }

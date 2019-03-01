@@ -5,8 +5,9 @@ import java.io.InputStream;
 
 import javax.imageio.ImageIO;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
+import com.barcode.component.BarcodeInfo;
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.MultiFormatReader;
 import com.google.zxing.Reader;
@@ -14,9 +15,7 @@ import com.google.zxing.Result;
 import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
 import com.google.zxing.common.HybridBinarizer;
 
-import lombok.Getter;
-
-@Component
+@Service
 public class BarcodeImageDecoder {
 
     public BarcodeInfo decodeImage(InputStream inputStream) throws BarcodeDecodingException {
@@ -44,18 +43,7 @@ public class BarcodeImageDecoder {
         }
     }
 
-    public static class BarcodeInfo {
-        @Getter
-        private final String text;
-        @Getter
-        private final String format;
-
-        BarcodeInfo(String text, String format) {
-            this.text = text;
-            this.format = format;
-        }
-    }
-
+    
     public static class BarcodeDecodingException extends Exception {
         BarcodeDecodingException(Throwable cause) {
             super(cause);
