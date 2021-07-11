@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
+Built-By: pasha
+Build-Jdk: 15.0.2
 Implementation-Title: barcode
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: pasha
 Implementation-Vendor-Id: com-barcode
-Build-Jdk: 1.8.0_201
-Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
- ot-starter-parent/barcode
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/barcode
 Created-By: Maven Integration for Eclipse
 
