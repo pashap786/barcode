@@ -1,6 +1,4 @@
-/target/
-<<<<<<< HEAD
-=======
+
 *.project
 *.class
 *.settings
@@ -9,4 +7,3 @@
 .class
 
 /target/**
->>>>>>> 3d721e41e4d7cb374c663b699aaa36921098749e
