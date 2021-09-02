@@ -34,7 +34,6 @@ public class BarcodeTest {
 			log.info("{}", bi);
 			assertTrue(bi != null);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
