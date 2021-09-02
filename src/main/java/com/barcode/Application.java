@@ -9,6 +9,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
+import org.springframework.util.unit.DataSize;
 import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 
 import com.barcode.decoder.BarcodeImageDecoder;
@@ -33,8 +34,8 @@ public class Application extends SpringBootServletInitializer {
 	@Bean
 	public MultipartConfigElement multipartConfigElement() {
 	    MultipartConfigFactory factory = new MultipartConfigFactory();
-	    factory.setMaxFileSize("500MB");
-	    factory.setMaxRequestSize("500MB");
+	    factory.setMaxRequestSize(DataSize.ofMegabytes(50));
+	    factory.setMaxFileSize(DataSize.ofKilobytes(50));
 	    return factory.createMultipartConfig();
 	}
 
